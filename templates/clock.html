@@ -4,20 +4,8 @@
     <title>Current Time</title>
     
     <link rel="stylesheet" type="text/css" href="/static/style.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        function fetchTime() {  
-            $.getJSON("/time", function(data){
-                for (var key in data) {
-                    $("#"+ key).html(data[key]);
-                }   
-            });
-        }
-
-        // Fetch the time every second
-        setInterval(fetchTime, 1000);
-    </script>
+    <script src="/static/main.js"></script>
 </head>
 <body>
     <div class="time-container">
