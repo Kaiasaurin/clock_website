@@ -8,8 +8,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
     <script>
         function fetchTime() {  
-            $.get("/time", function(data){
-                $("#time").html(data);  
+            $.getJSON("/time", function(data){
+                for (var key in data) {
+                    $("#"+ key).html(data[key]);
+                }   
             });
         }
 
@@ -18,6 +20,10 @@
     </script>
 </head>
 <body>
-    <span id="time">{{ time }}</span>
+    <div id="US/Pacific"></div>
+    <div id="US/Mountain"></div>
+    <div id="US/Central"></div>
+    <div id="US/Eastern"></div>
+    <div id="UTC"></div>
 </body>
 </html>
