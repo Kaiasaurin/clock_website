@@ -15,12 +15,14 @@ def time():
     return jsonify(time_zones_data)
 
 def get_time_zones():
-    time_zones = ["US/Pacific", "US/Mountain", "US/Central", "US/Eastern", "UTC"]
+    time_zones = ["US-Pacific", "US-Mountain", "US-Central", "US-Eastern", "UTC"]
     time_zones_data = {}
     for tz in time_zones:
-        now = datetime.datetime.now(pytz.timezone(tz)).strftime("%Y-%m-%d %I:%M:%S %p")
+        tz_original = tz.replace("-", "/")
+        now = datetime.datetime.now(pytz.timezone(tz_original)).strftime("%Y-%m-%d %I:%M:%S %p")
         time_zones_data[tz] = now
     return time_zones_data
+
     
 
 if __name__ == "__main__":

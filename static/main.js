@@ -1,11 +1,9 @@
-$(document).ready(function() {
-    function fetchTime() {  
-        $.getJSON("/time", function(data){
-            for (var key in data) {
-                $("#"+ key).html(data[key]);
-            }   
-        });
-    }
+function fetchTime() {  
+    $.getJSON("/time", function(data){
+        for (var key in data) {
+            $("#"+ key.replace("/", "-")).html(data[key]);
+        }   
+    });
+}
 
-    setInterval(fetchTime, 1000);
-});
+setInterval(fetchTime, 1000);
