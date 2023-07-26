@@ -1,16 +1,21 @@
-from flask import Flask, render_template
-import datetime 
-from markupsafe import escape
+from flask import Flask, json
+from datetime import datetime
+import pytz
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('clock.html', time = datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p"))
+time_zones = {
+    "PST": "US/Pacific",
+    "MST": "US/Mountain",
+    "CST": "US/Central",
+    "EST": "US/Eastern",
+    "UTC": "UTC"
+}
 
-@app.route('/time')
+@app.route("/time")
 def time():
-    return datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=4000)
+    response = {}
+    for tz_short, tz in time_zones.items():
+        now = datetime.now(pytz.timezone(tz))
+        response[tz_short] = now.strftime("%Y-%m-%d %I:%M:%S %p")
+    return json.dumps(response)
