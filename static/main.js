@@ -1,7 +1,7 @@
 function fetchTime() {  
     $.getJSON("/time", function(data){
         for (var key in data) {
-            $("#"+ key.replace("/", "-")).html(data[key]);
+            $("#" + key).html(data[key]);  // Use the key directly as the ID
         }   
     });
 }
