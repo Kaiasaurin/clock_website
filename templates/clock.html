@@ -5,7 +5,7 @@
     
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         function fetchTime() {  
             $.getJSON("/time", function(data){
@@ -20,10 +20,20 @@
     </script>
 </head>
 <body>
-    <div id="US/Pacific"></div>
-    <div id="US/Mountain"></div>
-    <div id="US/Central"></div>
-    <div id="US/Eastern"></div>
-    <div id="UTC"></div>
+    <div class="time-container">
+        <div id="US/Pacific"></div>
+    </div>
+    <div class="time-container">
+        <div id="US/Mountain"></div>
+    </div>
+    <div class="time-container">
+        <div id="US/Central"></div>
+    </div>
+    <div class="time-container">
+        <div id="US/Eastern"></div>
+    </div>
+    <div class="time-container">
+        <div id="UTC"></div>
+    </div>
 </body>
 </html>
