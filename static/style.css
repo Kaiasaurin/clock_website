@@ -10,8 +10,8 @@ body {
 }
 
 /* Increase text size for mobile and iOS devices */
-.mobile body, .ios body {
-    font-size: 3em;
+.mobile, .ios {
+    font-size: 4em; /* 2x the original size */
 }
 
 .time-container {
