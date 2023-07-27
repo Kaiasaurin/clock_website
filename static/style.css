@@ -42,3 +42,11 @@ body {
         }
     }
 }
+
+/* CSS for mobile devices */
+@media only screen and (max-width: 600px) {
+    .time-container {
+        margin: 5px;
+        padding: 10px;
+    }
+}
