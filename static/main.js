@@ -11,10 +11,13 @@ function detectDevice() {
 function fetchTime() {  
     $.getJSON("/time", function(data){
         for (var key in data) {
-            $("#" + key).html(key.replace("-", "/") + ": " + data[key]);  // Append the time zone name to the current time
+            // Replace "/" with "-" to match HTML IDs
+            var timezoneHTMLID = key.replace("/", "-");
+            $("#" + timezoneHTMLID ).html(key + ": " + data[key]); 
         }   
     });
 }
+
 
 $(document).ready(function() {
     var deviceType = detectDevice();
