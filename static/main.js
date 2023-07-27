@@ -1,9 +1,8 @@
 function fetchTime() {  
     $.getJSON("/time", function(data){
         for (var key in data) {
-            $("#" + key).html(data[key]);  // Use the key directly as the ID
+            $("#" + key).html(key.replace("-", "/") + ": " + data[key]);  // Append the time zone name to the current time
         }   
     });
 }
-
 setInterval(fetchTime, 1000);
