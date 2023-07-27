@@ -17,33 +17,28 @@ body {
     width: 300px;
 }
 
-/* CSS for iOS devices */
 @supports (-webkit-touch-callout: none) {
     body {
         font-size: 3.5em; 
     }
     .element {
-        /* Apply aspect ratio for iOS devices (9:16 vertical) */
         height: 0;
-        padding-top: 177.78%; /* 16 / 9 * 100% */
+        padding-top: 177.78%; 
     }
 }
 
-/* CSS for other than iOS devices */
 @supports not (-webkit-touch-callout: none) {
     .element {
-        /* Apply aspect ratio for other devices (4:3 for mobile, 16:9 for desktop) */
         height: 0;
-        padding-top: 75%; /* 4 / 3 * 100% for mobile */
+        padding-top: 75%; 
     }
     @media (min-width: 768px) {
         .element {
-            padding-top: 56.25%; /* 9 / 16 * 100% for desktop */
+            padding-top: 56.25%; 
         }
     }
 }
 
-/* CSS for mobile devices */
 @media only screen and (max-width: 600px) {
     .time-container {
         margin: 5px;
@@ -51,7 +46,6 @@ body {
     }
 }
 
-/* CSS for navigation menu */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -66,7 +60,6 @@ nav ul > li {
     padding: 10px;
 }
 
-/* Selecting the anchor tags directly under list items in the main menu */
 nav ul > li > a {
     color: #ffffff;
 }
