@@ -18,7 +18,7 @@ def get_time_zones():
     time_zones = [
         "US/Pacific", "US/Mountain", "US/Central", "US/Eastern",
         "Pacific/Auckland", "Australia/Melbourne", "Australia/Sydney", "Australia/Darwin", "Australia/Perth",
-        "Asia/Seoul", "Asia/Shanghai", "Asia/Beijing", "Asia/Jerusalem", "Asia/Singapore", "Asia/Bangkok", "Asia/Tokyo", "Pacific/Fiji",
+        "Asia/Seoul", "Asia/Shanghai", "Asia/Shanghai", "Asia/Jerusalem", "Asia/Singapore", "Asia/Bangkok", "Asia/Tokyo", "Pacific/Fiji",
         "Europe/Berlin", "Europe/Moscow", "Europe/Rome", "Europe/Kiev", "Europe/Zurich", "Europe/Madrid", "Europe/Lisbon", "Europe/Paris", "Europe/London"        
     ]
     time_zones_data = {}
