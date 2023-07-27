@@ -42,7 +42,7 @@ def get_time_zones():
     time_zones_data = {}
     for tz in time_zones:
         now = datetime.datetime.now(pytz.timezone(tz)).strftime("%Y-%m-%d %I:%M:%S %p")
-        tz_id = tz.replace("/", "-")  # Replace "/" with "-" to create a valid CSS ID
+        tz_id = tz  # Just use the time zone as it is
         time_zones_data[tz_id] = now
     return time_zones_data
 if __name__ == "__main__":
