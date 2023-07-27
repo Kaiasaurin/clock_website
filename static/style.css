@@ -60,7 +60,7 @@ nav ul {
 nav ul li {
     display: block;
     background-color: #474747;
-    color: #dddddd;
+    color: #ffffff; /* changed to white */
     border: 2px solid #dddddd00;
     margin: 10px;
     padding: 10px;
