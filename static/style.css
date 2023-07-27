@@ -16,3 +16,37 @@ body {
     text-align: center;
     width: 300px;
 }
+
+/* CSS for iOS devices */
+@supports (-webkit-touch-callout: none) {
+    body {
+        font-size: 3.5em; 
+    }
+    .element {
+        /* Apply aspect ratio for iOS devices (9:16 vertical) */
+        height: 0;
+        padding-top: 177.78%; /* 16 / 9 * 100% */
+    }
+}
+
+/* CSS for other than iOS devices */
+@supports not (-webkit-touch-callout: none) {
+    .element {
+        /* Apply aspect ratio for other devices (4:3 for mobile, 16:9 for desktop) */
+        height: 0;
+        padding-top: 75%; /* 4 / 3 * 100% for mobile */
+    }
+    @media (min-width: 768px) {
+        .element {
+            padding-top: 56.25%; /* 9 / 16 * 100% for desktop */
+        }
+    }
+}
+
+/* CSS for mobile devices */
+@media only screen and (max-width: 600px) {
+    .time-container {
+        margin: 5px;
+        padding: 10px;
+    }
+}
