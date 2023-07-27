@@ -24,7 +24,7 @@ def get_time_zones():
 
     # Asia time zones
     "Asia/Seoul", "Asia/Shanghai", "Asia/Jerusalem", 
-    "Asia/Singapore", "Asia/Bangkok", "Asia/Tokyo", "Asia/Suva",
+    "Asia/Singapore", "Asia/Bangkok", "Asia/Tokyo",
 
     # Europe time zones
     "Europe/Berlin", "Europe/Moscow", "Europe/Rome", "Europe/Kiev",
