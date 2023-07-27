@@ -20,7 +20,7 @@ body {
 /* CSS for iOS devices */
 @supports (-webkit-touch-callout: none) {
     body {
-        font-size: 4em; /* 2x the original size */
+        font-size: 3.5em; 
     }
     .element {
         /* Apply aspect ratio for iOS devices (9:16 vertical) */
