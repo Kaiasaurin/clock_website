@@ -9,6 +9,11 @@ body {
     color: #dddddd;
 }
 
+/* Increase text size for mobile and iOS devices */
+.mobile body, .ios body {
+    font-size: 3em;
+}
+
 .time-container {
     border: 2px solid #dddddd;
     padding: 20px;
@@ -17,15 +22,23 @@ body {
     width: 300px;
 }
 
+/* CSS for iOS devices */
 .ios .element {
+    /* Apply aspect ratio for iOS devices (9:16 vertical) */
     height: 0;
-    padding-top: 177.78%; 
+    padding-top: 177.78%; /* 16 / 9 * 100% */
 }
+
+/* CSS for other mobile devices */
 .mobile .element {
+    /* Apply aspect ratio for other mobile devices (4:3) */
     height: 0;
-    padding-top: 75%;
+    padding-top: 75%; /* 4 / 3 * 100% */
 }
+
+/* CSS for desktop devices */
 .desktop .element {
+    /* Apply aspect ratio for desktop devices (16:9) */
     height: 0;
-    padding-top: 56.25%;
+    padding-top: 56.25%; /* 9 / 16 * 100% */
 }
