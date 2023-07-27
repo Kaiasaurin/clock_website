@@ -19,9 +19,8 @@ def get_time_zones():
     time_zones_data = {}
     for tz in time_zones:
         now = datetime.datetime.now(pytz.timezone(tz)).strftime("%Y-%m-%d %I:%M:%S %p")
-        time_zones_data[tz] = now
+        tz_id = tz.replace("/", "-")  # Replace "/" with "-" to create a valid CSS ID
+        time_zones_data[tz_id] = now
     return time_zones_data
-    
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=4000)
