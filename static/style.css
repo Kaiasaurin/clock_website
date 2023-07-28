@@ -1,3 +1,13 @@
+:root {
+    --text-color: #dddddd;
+    --bg-color: #363636;
+}
+
+nav ul {
+    max-height: 100vh;
+    overflow: auto;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,16 +15,22 @@ body {
     align-items: center;
     height: 100vh;
     font-size: 2em;
-    background-color: #363636;
-    color: #dddddd;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.5s ease;
 }
 
 .time-container {
-    border: 2px solid #dddddd;
+    border: 2px solid var(--text-color);
     padding: 20px;
     margin: 10px;
     text-align: center;
     width: 300px;
+    transition: all 0.5s ease;
+}
+
+.time-container:hover {
+    transform: scale(1.05);
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -46,31 +62,25 @@ body {
     }
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 nav ul > li {
     display: block;
     background-color: #474747;
-    color: #dddddd;
-    border: 2px solid #dddddd;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
     margin: 10px;
     padding: 10px;
+    transition: all 0.5s ease;
+}
+
+nav ul > li:hover {
+    transform: scale(1.05);
 }
 
 nav ul > li > a {
     color: #ffffff;
+    transition: color 0.5s ease;
 }
 
-nav ul li ul {
-    display: none;
-}
-
-nav ul li:hover ul {
-    display: block;
-    position: relative;
-    top: 0;
-    left: 100%;
+nav ul > li > a:hover {
+    color: var(--text-color);
 }
