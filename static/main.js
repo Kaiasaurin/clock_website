@@ -22,5 +22,14 @@ function fetchTime() {
 $(document).ready(function() {
     var deviceType = detectDevice();
     $("body").addClass(deviceType);
-    setInterval(fetchTime, 1000);
+
+    //fetch the time once when document is ready
+    fetchTime();
+    
+    //attempt to synchronize interval with the full second
+    const delayUntilFullSecond = 1000 - new Date().getMilliseconds();
+
+    setTimeout(() => {
+        setInterval(fetchTime, 1000);
+    }, delayUntilFullSecond);
 });
