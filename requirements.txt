@@ -1,5 +1,5 @@
 Flask==2.2.5
-gunicorn==21.0.1
+gunicorn==22.0.0
 itsdangerous==2.0.1
 markupsafe==2.0.1
 pytz==2021.1
